@@ -25,6 +25,25 @@ def imcCalculate(statureValue, weigthValue):
     IMC = (weigthValue/(statureValue**2))
     return IMC
 
+def yourImc(imc):
+    valueImc = imc
+    if imc <= 16:
+        print('Su indice de masa corporal es ',imc ,': infrapeso e indica que se encuentra en delgadez severa')
+    elif imc <= 16.99:
+        print('Su indice de masa corporal es ',imc ,': infrapeso e indica que se encuentra en delgadez moderada')
+    elif imc <= 18.49:
+        print('Su indice de masa corporal es ',imc ,': infrapeso e indica que se encuentra en delgadez aceptable')
+    elif imc <= 24.99:
+        print('Su indice de masa corporal es ',imc ,': pso normal e indica que se encuentra en con un peso adecuado')
+    elif imc <= 29.99:
+        print('Su indice de masa corporal es ',imc ,': sobre peso e indica que se encuentra en en un peso un poco encima de lo normal')
+    elif imc <= 34.99:
+        print('Su indice de masa corporal es ',imc ,': obeso e indica que se encuentra en el primer grado de obesidad')
+    elif imc <= 40.00:
+        print('Su indice de masa corporal es ',imc ,': obeso e indica que se encuentra en el segundo gado de obesidad')
+    else:
+        print('Su indice de masa corporal es ',imc ,': obeso e indica que se encuentra en el tercer grado de obesidad ; cuidese que ya huele a formol')
+
 def whileErrorNumbers(validation):
     while validation:
         heigth = askVariable('Porfavor digite su estatura en metro y utilice punto pra los decimales: ')
@@ -34,6 +53,7 @@ def whileErrorNumbers(validation):
         value2 = numbersValidation(weigth)
         IMC = imcCalculate(value, value2)
         print('señor/señora', name, ' su indice de masa muscular es de: ', IMC )
+        yourImc(IMC)
         if validation == value:
             continue
         else:
