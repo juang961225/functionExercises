@@ -27,7 +27,7 @@ def imcCalculate(statureValue, weigthValue):
 
 def whileErrorNumbers(validation):
     while validation:
-        heigth = askVariable('Porfavor digite su estatura en centimetros: ')
+        heigth = askVariable('Porfavor digite su estatura en metro y utilice punto pra los decimales: ')
         weigth = askVariable('Porfavor digite su peso en kilogramos: ')
         
         value = numbersValidation(heigth)
